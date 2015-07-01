@@ -21,9 +21,6 @@ public class BaseActivity extends ActionBarActivity {
         initSystemBarTint(true, R.color.color_primary);
     }
 
-    /**
-     * Android³Á½þÊ½Í¨ÖªÀ¸
-     */
     public void initSystemBarTint(boolean on, int res) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             setTranslucentStatus(on);
