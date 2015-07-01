@@ -27,7 +27,7 @@ import butterknife.InjectView;
 /**
  * Created by sunfusheng on 2015/6/25.
  */
-public class NewsActivity extends BaseActivity implements XListView.IXListViewListener {
+public class ScretListActivity extends BaseActivity implements XListView.IXListViewListener {
 
     @InjectView(R.id.toolbar)
     Toolbar mToolbar;
@@ -83,7 +83,7 @@ public class NewsActivity extends BaseActivity implements XListView.IXListViewLi
             public void create(SwipeMenu menu) {
                 SwipeMenuItem openItem = new SwipeMenuItem(getApplicationContext());
                 openItem.setBackground(new ColorDrawable(Color.rgb(0xF9, 0x3F, 0x25)));
-                openItem.setWidth(DisplayUtil.dip2px(NewsActivity.this, 90));
+                openItem.setWidth(DisplayUtil.dip2px(ScretListActivity.this, 90));
                 openItem.setTitle("删除");
                 openItem.setTitleSize(16);
                 openItem.setTitleColor(Color.WHITE);

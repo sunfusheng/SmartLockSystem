@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 
 import com.smart.lock.ui.AboutActivity;
-import com.smart.lock.ui.NewsActivity;
+import com.smart.lock.ui.ScretListActivity;
 import com.smart.lock.ui.SettingsActivity;
 
 public class NavigateManager {
@@ -19,8 +19,8 @@ public class NavigateManager {
         context.startActivity(intent);
     }
 
-    public static void gotoNewsActivity(Context context) {
-        Intent intent = new Intent(context, NewsActivity.class);
+    public static void gotoScretListActivity(Context context) {
+        Intent intent = new Intent(context, ScretListActivity.class);
         context.startActivity(intent);
     }
 

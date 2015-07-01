@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.ant.liao.GifView;
 import com.smart.lock.R;
 import com.smart.lock.ui.base.BaseActivity;
+import com.smart.lock.ui.control.NavigateManager;
 import com.smart.lock.widget.ActionSheet;
 
 import butterknife.ButterKnife;
@@ -129,7 +130,7 @@ public class MainActivity extends BaseActivity implements View.OnTouchListener, 
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.tv_scret_setting:
-
+                NavigateManager.gotoScretListActivity(this);
                 break;
             case R.id.tv_finger_setting:
 

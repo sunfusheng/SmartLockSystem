@@ -48,7 +48,7 @@
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".ui.NewsActivity"
+            android:name=".ui.ScretListActivity"
             android:screenOrientation="portrait">
         </activity>
 
