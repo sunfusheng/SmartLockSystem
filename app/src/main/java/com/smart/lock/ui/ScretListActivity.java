@@ -49,7 +49,7 @@ public class ScretListActivity extends BaseActivity implements XListView.IXListV
     }
 
     private void initActionBar() {
-        mToolbar.setTitle("新闻");
+        mToolbar.setTitle("密码设置");
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
