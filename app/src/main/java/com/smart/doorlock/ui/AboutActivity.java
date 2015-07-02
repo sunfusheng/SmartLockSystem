@@ -17,8 +17,6 @@ public class AboutActivity extends BaseActivity {
     @InjectView(R.id.toolbar)
     Toolbar mToolbar;
 
-    private boolean isShowGifView = true;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

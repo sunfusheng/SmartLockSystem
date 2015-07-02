@@ -87,6 +87,7 @@ public class MainActivity extends BaseActivity implements View.OnTouchListener, 
                     public void onOtherButtonClick(ActionSheet actionSheet, int index) {
                         switch (index) {
                             case 0:
+                                NavigateManager.gotoAboutActivity(MainActivity.this);
                                 break;
                             case 1:
                                 finish();
@@ -133,10 +134,10 @@ public class MainActivity extends BaseActivity implements View.OnTouchListener, 
                 NavigateManager.gotoPwdListActivity(this);
                 break;
             case R.id.tv_finger_setting:
-
+                NavigateManager.gotoPwdListActivity(this);
                 break;
             case R.id.tv_other_setting:
-
+                NavigateManager.gotoPwdListActivity(this);
                 break;
         }
     }

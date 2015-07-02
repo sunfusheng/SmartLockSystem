@@ -6,9 +6,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.smart.doorlock.entity.PwdEntity;
+import com.smart.doorlock.util.TimeUtil;
 import com.smart.lock.R;
 import com.smart.doorlock.adapter.base.BaseListAdapter;
 
+import java.util.Calendar;
 import java.util.List;
 
 import butterknife.ButterKnife;
@@ -37,6 +39,7 @@ public class PwdAdapter extends BaseListAdapter<PwdEntity> {
         final PwdEntity entity = getItem(position);
         holder.tvPwdTitle.setText(entity.getTitle());
         holder.tvPwdAuthor.setText(entity.getAuthor());
+        holder.tvPwdTime.setText(TimeUtil.convertDateToString(Calendar.getInstance().getTimeInMillis()));
 
         return convertView;
     }
