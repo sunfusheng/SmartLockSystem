@@ -24,12 +24,12 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/app_icon"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/Theme.Tuling.NoActionBar" >
 
         <activity
-            android:name=".ui.MainActivity"
+            android:name="com.smart.doorlock.ui.MainActivity"
             android:label="@string/app_name"
             android:windowSoftInputMode="stateHidden|adjustResize" >
             <intent-filter>
@@ -40,15 +40,15 @@
         </activity>
 
         <activity
-            android:name=".ui.SettingsActivity"
+            android:name="com.smart.doorlock.ui.SettingsActivity"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".ui.AboutActivity"
+            android:name="com.smart.doorlock.ui.AboutActivity"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".ui.ScretListActivity"
+            android:name="com.smart.doorlock.ui.PwdListActivity"
             android:screenOrientation="portrait">
         </activity>
 

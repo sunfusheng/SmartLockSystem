@@ -27,7 +27,7 @@
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/tv_scret_setting"
+        android:id="@+id/tv_pwd_setting"
         style="@style/TextView_FullW"
         android:layout_below="@+id/ll_company_info"
         android:text="密码配置" />
@@ -35,7 +35,7 @@
     <TextView
         android:id="@+id/tv_finger_setting"
         style="@style/TextView_FullW"
-        android:layout_below="@+id/tv_scret_setting"
+        android:layout_below="@+id/tv_pwd_setting"
         android:text="指纹设置" />
 
     <TextView
