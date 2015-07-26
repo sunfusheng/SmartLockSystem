@@ -9,7 +9,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.readystatesoftware.systembartint.SystemBarTintManager;
-import com.smart.lock.R;
+import com.smart.doorlock.R;
 
 import de.devland.esperandro.Esperandro;
 

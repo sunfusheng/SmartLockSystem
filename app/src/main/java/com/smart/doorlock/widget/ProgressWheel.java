@@ -14,7 +14,8 @@ import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.View;
 
-import com.smart.lock.R;
+import com.smart.doorlock.R;
+
 
 public class ProgressWheel extends View {
     private static final String TAG = ProgressWheel.class.getSimpleName();

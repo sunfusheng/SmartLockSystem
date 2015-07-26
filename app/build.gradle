@@ -6,7 +6,7 @@ android {
     buildToolsVersion '21.1.2'
 
     defaultConfig {
-        applicationId "com.smart.lock"
+        applicationId "com.smart.doorlock"
         minSdkVersion 14
         targetSdkVersion 21
         versionCode 1

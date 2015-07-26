@@ -3,7 +3,7 @@ package com.smart.doorlock.ui;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
-import com.smart.lock.R;
+import com.smart.doorlock.R;
 import com.smart.doorlock.ui.base.BaseActivity;
 
 import butterknife.ButterKnife;

@@ -29,5 +29,87 @@
     <string name="xlistview_header_last_time">上次更新时间：</string>
     <string name="xlistview_footer_hint_normal">查看更多</string>
     <string name="xlistview_footer_hint_ready">松开载入更多</string>
+	
+	<string name="menu_scan">搜索</string>
+    <string name="menu_stop">停止</string>
+    <string name="menu_connect">连接</string>
+    <string name="menu_disconnect">断开</string>
+    <string name="ble_not_supported">蓝牙版本低，不支持BLE！</string>
+    <string name="error_bluetooth_not_supported">不支持蓝牙.</string>
+    <string name="unknown_device">位置设备</string>
 
+    <string name="item_modify">修改</string>
+    <string name="item_delete">删除</string>
+    <string name="ble_device_scan">设备搜索</string>
+
+    <string name="state_connected">已连接</string>
+    <string name="state_disconnected">已断开</string>
+
+    <string name="device_name">名称: </string>
+    <string name="zw_unregister">未录入</string>
+    <string name="zw_registered">已录入</string>
+
+    <string name="set_zw">指纹设置</string>
+    <string name="set_pwd">密码设置</string>
+
+    <string name="str_zw">指纹</string>
+    <string name="str_pwd">密码</string>
+    <string name="str_card">卡</string>
+    <string name="str_group">组</string>
+    <string name="str_zhang">张</string>
+    <string name="str_index">第</string>
+
+    <string name="alert_message_connect">正在连接到设备</string>
+    <string name="alert_message_connect_title">设备连接</string>
+    <string name="alert_message_exit">确认退出?</string>
+    <string name="alert_message_exit_cancel">取消</string>
+    <string name="alert_message_exit_ok">确定</string>
+    <string name="alert_message_no">取消</string>
+    <string name="alert_message_no_internet">No internet connection</string>
+    <string name="alert_message_reconnect">设备蓝牙连接已经断开.</string>
+    <string name="alert_message_wait">请等待...</string>
+    <string name="alert_message_yes">是</string>
+    <string name="connect_delay_message">无法连接到设备！</string>
+    <string name="connect_succ_message">智能门锁连接成功！</string>
+    <string name="ble_sync_time_succ">同步时间成功！</string>
+
+    <string name="reading_pwd_set">正在读取密码配置</string>
+    <string name="modifying_pwd_set">正在修改密码配置</string>
+
+    <string name="reading_zw_set">正在读取指纹配置</string>
+    <string name="deleting_zw_set">正在删除指纹配置</string>
+    <string name="adding_zw_set">正在录入指纹</string>
+    <string name="modifying_zw_set">正在修改名称</string>
+    <string name="reading_seting_set">正在读取设置</string>
+    <string name="modifying_seting_set">正在修改设置</string>
+
+    <string name="reading_set_overtime">读取数据超时！</string>
+    <string name="reading_set_succ">读取数据成功！</string>
+
+    <string name="read_pwd_set_title">读取密码</string>
+    <string name="modify_pwd_set_title">修改密码</string>
+
+    <string name="read_zw_set_title">读取指纹</string>
+    <string name="add_zw_set_title">录入指纹</string>
+    <string name="delete_zw_set_title">删除指纹</string>
+    <string name="modify_zw_set_title">修改名称</string>
+
+    <string name="process_succ">操作成功！</string>
+    <string name="process_fail">操作失败！</string>
+
+    <string name="basic_set_title">基本设置</string>
+
+    <string name="log_list_title">开锁记录</string>
+    <string name="event_type_null">未知事件</string>
+    <string name="event_type_pwd">密码开锁</string>
+    <string name="event_type_zw">指纹开锁</string>
+    <string name="event_type_zw_pwd">密码+指纹开锁</string>
+    <string name="event_type_card">刷卡开锁</string>
+    <string name="event_type_key">机械钥匙开锁</string>
+    <string name="event_type_pwd_error">密码验证错误报警</string>
+    <string name="event_type_zw_error">指纹多次验证失败报警</string>
+    <string name="event_type_infra_det">红外检测报警</string>
+
+    <string name="use_text_title">使用</string>
+    <string name="open_door_title">开门</string>
 </resources>

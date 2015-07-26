@@ -21,8 +21,8 @@ import android.widget.RelativeLayout;
 import android.widget.Scroller;
 import android.widget.TextView;
 
+import com.smart.doorlock.R;
 import com.smart.doorlock.widget.swipemenulistview.SwipeMenuListView;
-import com.smart.lock.R;
 
 public class XListView extends SwipeMenuListView implements OnScrollListener {
 

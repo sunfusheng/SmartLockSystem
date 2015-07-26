@@ -19,4 +19,6 @@
     <dimen name="base_padding_10">10dp</dimen>
     <dimen name="base_padding_15">15dp</dimen>
 
+    <dimen name="setting_item_divide_line">0.5dip</dimen>
+
 </resources>

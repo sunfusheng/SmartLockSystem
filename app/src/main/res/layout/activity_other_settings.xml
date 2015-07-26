@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/bk">
+
+    <include layout="@layout/app_base_toolbar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:text="请选择开门方式"
+        android:textColor="@color/font_black_0"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RadioGroup
+            android:id="@+id/open_door_type"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/type_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="密码"
+                android:textColor="@color/font_black_0"
+                android:textSize="18sp" >
+            </RadioButton>
+
+            <RadioButton
+                android:id="@+id/type_zw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="指纹"
+                android:textColor="@color/font_black_0"
+                android:textSize="18sp" >
+            </RadioButton>
+
+            <RadioButton
+                android:id="@+id/type_zw_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="指纹+密码"
+                android:textColor="@color/font_black_0"
+                android:textSize="18sp" >
+            </RadioButton>
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/setting_item_divide_line"
+        android:layout_marginTop="20dp"
+        android:background="@color/font_black_5"
+        android:paddingTop="3dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:text="请输入语音关闭时间段"
+        android:textColor="@color/font_black_0"
+        android:textSize="20sp" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal" >
+        <EditText
+            android:id="@+id/voice_start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:editable="true"
+            android:gravity="center_vertical"
+            android:hint="开始时间"
+            android:inputType="number"
+            android:maxLength="2"
+            android:numeric="integer"
+            android:paddingLeft="40dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+        <View
+            android:layout_width="30dp"
+            android:layout_height="@dimen/setting_item_divide_line"
+            android:layout_marginTop="20dp"
+            android:background="@color/font_black_2"
+            android:paddingTop="3dp" />
+        <EditText
+            android:id="@+id/voice_stop_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:editable="true"
+            android:gravity="center_vertical"
+            android:hint="停止时间"
+            android:inputType="number"
+            android:maxLength="2"
+            android:numeric="integer"
+            android:paddingLeft="40dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/setting_item_divide_line"
+        android:layout_marginTop="20dp"
+        android:background="@color/font_black_5"
+        android:paddingTop="3dp" />
+
+    <Button
+        android:id="@+id/save_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:background="@color/color_person_info"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp"
+        android:text="保存"
+        android:textColor="@color/font_black_0"
+        android:textSize="20sp" />
+
+</LinearLayout>

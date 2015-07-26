@@ -25,7 +25,8 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
-import com.smart.lock.R;
+import com.smart.doorlock.R;
+
 
 public class ActionSheet extends Fragment implements OnClickListener {
 

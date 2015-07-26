@@ -18,7 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.smart.lock.R;
+import com.smart.doorlock.R;
 
 public class XListViewHeader extends LinearLayout {
 	private LinearLayout mContainer;

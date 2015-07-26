@@ -1,8 +1,7 @@
 package com.smart.doorlock.util;
 
 import android.content.Context;
-
-import com.smart.lock.R;
+import com.smart.doorlock.R;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -12,19 +11,12 @@ import java.util.Date;
 public class TimeUtil {
     public static final String TIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
     public static final String TIME_FORMAT_NO_SECOND = "yyyy-MM-dd HH:mm";
-    public static final String DATE_FORMAT = "yyyy-MM-dd";
-    public static final String DATE_CHINA = "yyyy年M月dd日";
     public static final String DAY_FORMAT = "MM-dd";
     public static final String DAY_TIME_FORMAT = "HH:mm";
     public static final String DATE_FORMAT_TODAY = "今天HH:mm";
     public static final String DATE_FORMAT_PASS_TADAY = "MM月dd日HH:mm";
     public static final String DOUBLE_FORMAT_TWO_POINT = "#0.00";
 
-    /**
-     * @param date   單位爲毫秒
-     * @param format
-     * @return
-     */
     public static String convertLongToString(long date, String format) {
         SimpleDateFormat sf = new SimpleDateFormat(format);
         return sf.format(new Date(date));
@@ -103,33 +95,6 @@ public class TimeUtil {
         return a + "";
     }
 
-    public static String convertDateToCHINAString(long date) {
-        long ldate = date * 1000;
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(new Date(ldate));
-        String years = String.valueOf(calendar.get(Calendar.YEAR));
-        String mouth = String.valueOf(calendar.get(Calendar.MONTH) + 1);
-        String day = String.valueOf(calendar.get(calendar.DAY_OF_MONTH));
-        return years + "年" + mouth + "月" + day + "日";
-    }
-
-    public static String convertDateToCHINAStringDuration(long start_time, long end_time) {
-        long ldate = start_time * 1000;
-        long ldate_end = end_time * 1000;
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(new Date(ldate));
-        String years = String.valueOf(calendar.get(Calendar.YEAR));
-        String mouth = String.valueOf(calendar.get(Calendar.MONTH) + 1);
-        String day = String.valueOf(calendar.get(calendar.DAY_OF_MONTH));
-
-        calendar.setTime(new Date(ldate_end));
-        String mouth_end = String.valueOf(calendar.get(Calendar.MONTH) + 1);
-        String day_end = String.valueOf(calendar.get(calendar.DAY_OF_MONTH));
-
-        return years + "年" + mouth + "月" + day + "日至" + mouth_end + "月" + day_end + "日";
-    }
-
-
     public static String convertDate(long dates) {
         long ldate = dates * 1000;
         SimpleDateFormat sf = new SimpleDateFormat(TIME_FORMAT);
@@ -176,8 +141,8 @@ public class TimeUtil {
     public static String friendlyTime(Context ctx, long sdate) {
         SimpleDateFormat formatter = new SimpleDateFormat(TIME_FORMAT);
         Date currDate = new Date(sdate);
-        String str = formatter.format(currDate);
 
+        String str = formatter.format(currDate);
         Date time = toDate(str);
         if (time == null) {
             return "Unknown";
@@ -223,63 +188,29 @@ public class TimeUtil {
             ftime = ctx.getString(R.string.the_day_before_yestoday);
         } else if (days > 2) {
             ftime = convertDateToString(sdate);
-//            SimpleDateFormat format = new SimpleDateFormat(DATE_FORMAT);
-//            cal.setTimeInMillis(sdate);
-//            ftime = format.format(new Date(cal.getTimeInMillis()));
         }
         return ftime;
     }
 
-    public static boolean compareTime(int startHour, int startMinument, int endHour, int endMinument) {
-        SimpleDateFormat df = new SimpleDateFormat(DAY_TIME_FORMAT);
-        try {
-            Date startDate = df.parse(String.valueOf(startHour) + ":" + String.valueOf(startMinument));
-            Date endDate = df.parse(String.valueOf(endHour) + ":" + String.valueOf(endMinument));
-            return startDate.getTime() - endDate.getTime() >= 0;
-        } catch (Exception e) {
-            return false;
-        }
+	public static byte[] getDateTimeStr() {
+		SimpleDateFormat sDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
+		String date = sDateFormat.format(new java.util.Date());
+		return date.getBytes();
+	}
+
+    public static String formatBcdTime(byte[] time_byte,int pos){
+        String time_str = String.format("20%02X%02X%02X%02X%02X%02X", time_byte[pos],time_byte[pos+1],time_byte[pos+2],time_byte[pos+3],time_byte[pos+4],time_byte[pos+5]);
+        return time_str;
     }
 
-    public static boolean compareTime(String startTime, String endTime) {
-        SimpleDateFormat df = new SimpleDateFormat(DAY_TIME_FORMAT);
+    public static String getLogDisplayTime(Context ctx,String time_str){
+        SimpleDateFormat sDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
+        Date sDate = null;
         try {
-            Date startDate = df.parse(startTime);
-            Date endDate = df.parse(endTime);
-            return startDate.getTime() - endDate.getTime() >= 0;
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-    public static String formatVisitTime(int startHour, int startMinument, int endHour, int endMinument) {
-        SimpleDateFormat df = new SimpleDateFormat(DAY_TIME_FORMAT);
-        try {
-            Date startDate = df.parse(String.valueOf(startHour) + ":" + String.valueOf(startMinument));
-            Date endDate = df.parse(String.valueOf(endHour) + ":" + String.valueOf(endMinument));
-            return df.format(startDate) + "-" + df.format(endDate);
-        } catch (Exception e) {
+            sDate = sDateFormat.parse(time_str);
+        } catch (ParseException e) {
             return "";
         }
+        return friendlyTime(ctx,sDate.getTime());
     }
-
-
-    public static String getNameWithGender(String name, String gender) {
-        if (name != null) {
-            if (name.length() > 1) {
-                return name;
-            } else {
-                if ("M".equals(gender)) {
-                    return name + "先生";
-                } else if ("F".equals(gender)) {
-                    return name + "女士";
-                } else {
-                    return name;
-                }
-            }
-        } else {
-            return name;
-        }
-    }
-
 }

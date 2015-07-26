@@ -27,9 +27,15 @@
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/tv_pwd_setting"
+        android:id="@+id/tv_log_listview"
         style="@style/TextView_FullW"
         android:layout_below="@+id/ll_company_info"
+        android:text="开锁记录" />
+
+    <TextView
+        android:id="@+id/tv_pwd_setting"
+        style="@style/TextView_FullW"
+        android:layout_below="@+id/tv_log_listview"
         android:text="密码配置" />
 
     <TextView
